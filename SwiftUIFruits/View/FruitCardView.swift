@@ -13,16 +13,38 @@ struct FruitCardView: View {
     
     
     
-    // MARK: - Boddy
+    // MARK: - Body
     
     var body: some View {
-        VStack(spacing: 20) {
-            Image("blueberry")
-                .resizable()
-                .scaledToFit()
-                .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15), radius: 8, x: 6, y: 8)
-            Text("Blueberry")
-        }
+        ZStack {
+            VStack(spacing: 20) {
+                // Image
+                Image("blueberry")
+                    .resizable()
+                    .scaledToFit()
+                    .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15), radius: 8, x: 6, y: 8)
+                
+                // Title
+                Text("Blueberry")
+                    .foregroundColor(Color.white)
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
+                    .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15), radius: 2, x: 2, y: 2)
+                
+                // Headline
+                Text("Blueberries are pretty much the worst fruit in the whole world.")
+                    .foregroundColor(Color.white)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 16)
+                    .frame(maxWidth: 480)
+                
+                
+            } // VStack
+            
+        } // ZStack
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
+        .background(LinearGradient(gradient: Gradient(colors: [Color("ColorBlueberryLight"), Color("ColorBlueberryDark")]), startPoint: .top, endPoint: .bottom))
+        .cornerRadius(20)
     }
 }
 
