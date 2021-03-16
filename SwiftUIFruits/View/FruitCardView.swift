@@ -10,6 +10,8 @@ import SwiftUI
 struct FruitCardView: View {
     
     // MARK: - Properties
+    
+    var fruit: Fruit
     @State private var isAnimating: Bool = false
     
     
@@ -19,21 +21,21 @@ struct FruitCardView: View {
         ZStack {
             VStack(spacing: 20) {
                 // Image
-                Image("blueberry")
+                Image(fruit.image)
                     .resizable()
                     .scaledToFit()
                     .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15), radius: 8, x: 6, y: 8)
                     .scaleEffect(isAnimating ? 1.0 : 0.6)
                 
                 // Title
-                Text("Blueberry")
+                Text(fruit.title)
                     .foregroundColor(Color.white)
                     .font(.largeTitle)
                     .fontWeight(.heavy)
                     .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15), radius: 2, x: 2, y: 2)
                 
                 // Headline
-                Text("Blueberries are pretty much the worst fruit in the whole world.")
+                Text(fruit.headline)
                     .foregroundColor(Color.white)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 16)
@@ -52,7 +54,7 @@ struct FruitCardView: View {
             }
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
-        .background(LinearGradient(gradient: Gradient(colors: [Color("ColorBlueberryLight"), Color("ColorBlueberryDark")]), startPoint: .top, endPoint: .bottom))
+        .background(LinearGradient(gradient: Gradient(colors: fruit.colors), startPoint: .top, endPoint: .bottom))
         .cornerRadius(20)
         .padding(.horizontal, 20)
     }
@@ -66,12 +68,12 @@ struct FruitCardView: View {
 struct FruitCardView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            FruitCardView()
+            FruitCardView(fruit: fruitData[1])
                 .preferredColorScheme(.light)
                 .environment(\.sizeCategory, .accessibilityMedium)
                 .previewDevice("iPhone 12 Pro Max")
             
-            FruitCardView()
+            FruitCardView(fruit: fruitData[1])
                 .preferredColorScheme(.light)
                 .environment(\.sizeCategory, .accessibilityMedium)
                 .previewDevice("iPhone SE (2nd generation)")
