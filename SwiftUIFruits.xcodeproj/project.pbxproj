@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63021AF025FFD0240080757C /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63021AEF25FFD0240080757C /* StartButtonView.swift */; };
+		63021AF326006E7C0080757C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63021AF226006E7B0080757C /* OnboardingView.swift */; };
+		63021AF7260073B00080757C /* FruitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63021AF6260073B00080757C /* FruitModel.swift */; };
+		63021AFB260075050080757C /* FruitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63021AFA260075050080757C /* FruitData.swift */; };
 		63842BB525FB031F004D4818 /* SwiftUIFruitsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63842BB425FB031F004D4818 /* SwiftUIFruitsApp.swift */; };
 		63842BB725FB031F004D4818 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63842BB625FB031F004D4818 /* ContentView.swift */; };
 		63842BB925FB0325004D4818 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63842BB825FB0325004D4818 /* Assets.xcassets */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63021AEF25FFD0240080757C /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
+		63021AF226006E7B0080757C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		63021AF6260073B00080757C /* FruitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitModel.swift; sourceTree = "<group>"; };
+		63021AFA260075050080757C /* FruitData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitData.swift; sourceTree = "<group>"; };
 		63842BB125FB031F004D4818 /* SwiftUIFruits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIFruits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63842BB425FB031F004D4818 /* SwiftUIFruitsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIFruitsApp.swift; sourceTree = "<group>"; };
 		63842BB625FB031F004D4818 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +43,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63021AF5260073A30080757C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				63021AF6260073B00080757C /* FruitModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		63021AF9260074FD0080757C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				63021AFA260075050080757C /* FruitData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		63842BA825FB031E004D4818 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +78,8 @@
 		63842BB325FB031F004D4818 /* SwiftUIFruits */ = {
 			isa = PBXGroup;
 			children = (
+				63021AF9260074FD0080757C /* Data */,
+				63021AF5260073A30080757C /* Model */,
 				63842BC825FB09AD004D4818 /* View */,
 				63842BC625FB09A4004D4818 /* App */,
 				63842BB825FB0325004D4818 /* Assets.xcassets */,
@@ -76,6 +102,7 @@
 			children = (
 				63842BB425FB031F004D4818 /* SwiftUIFruitsApp.swift */,
 				63842BB625FB031F004D4818 /* ContentView.swift */,
+				63021AF226006E7B0080757C /* OnboardingView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -84,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				63842BC925FB09BF004D4818 /* FruitCardView.swift */,
+				63021AEF25FFD0240080757C /* StartButtonView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -157,8 +185,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63021AFB260075050080757C /* FruitData.swift in Sources */,
 				63842BCA25FB09BF004D4818 /* FruitCardView.swift in Sources */,
+				63021AF025FFD0240080757C /* StartButtonView.swift in Sources */,
 				63842BB725FB031F004D4818 /* ContentView.swift in Sources */,
+				63021AF326006E7C0080757C /* OnboardingView.swift in Sources */,
+				63021AF7260073B00080757C /* FruitModel.swift in Sources */,
 				63842BB525FB031F004D4818 /* SwiftUIFruitsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
