@@ -44,7 +44,6 @@ struct FruitCardView: View {
                 // Start Button
                 StartButtonView()
                 
-                
             } // VStack
             
         } // ZStack
