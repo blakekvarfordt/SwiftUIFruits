@@ -18,13 +18,31 @@ struct SettingsView: View {
                     
                     GroupBox(
                         label:
-                            HStack {
-                                Text("Fruit App".uppercased()).fontWeight(.bold)
-                                Spacer()
-                                Image(systemName: "info.circle")
-                            }
+                            SettingsLabelView(labelText: "Fruit App", labelImage: "info.circle")
                     ) {
-                        Text("Hello world")
+                        
+                        Divider().padding(.vertical, 4)
+                        
+                        HStack(alignment: .center, spacing: 10) {
+                            Image("logo")
+                                .renderingMode(.original)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 80, height: 80, alignment: .center)
+                                .cornerRadius(8)
+                            
+                            Text("Fruits have lots of nutrients. I hate them when I just want to eat food. Fruits are shiiiiiiiit")
+                        }
+                    }
+                    
+                    GroupBox(
+                        label:
+                            SettingsLabelView(labelText: "Application", labelImage: "apps.iphone")
+                    ) {
+                        
+                        SettingsRowView(titleText: "Developer", detailText: "Blake Kvarfordt")
+                        SettingsRowView(titleText: "Designer", detailText: "Blake Kvarfordt")
+                        SettingsRowView(titleText: "Website", linkLabel: "LinkedIn", linkDestination: "linkedin.com")
                     }
                     
                 } // Stack
